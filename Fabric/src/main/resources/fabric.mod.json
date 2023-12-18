@@ -1,15 +1,15 @@
 {
   "schemaVersion": 1,
   "id": "playertracking",
-  "version": "3.1",
+  "version": "3.2",
 
   "name": "Player Tracking",
   "description": "A PvP mod which allows tracking players via trackers in the world, originally created by mcpvp.",
   "authors": [ "Rick South" ],
   "contact": {
-    "homepage": "https://curseforge.com/minecraft/mc-mods/player-tracking",
-    "sources": "https://github.com/ricksouth/serilum-mc-mod-sources/tree/main/sources/Player%20Tracking",
-    "issues": "https://github.com/ricksouth/serilum-mc-mods/labels/Mod:%20Player%20Tracking"
+    "homepage": "https://serilum.com/mod/player-tracking",
+    "sources": "https://github.com/Serilum/Player-Tracking",
+    "issues": "https://github.com/Serilum/.issue-tracker/labels/Mod:%20Player%20Tracking"
   },
 
   "license": "All Right Reserved",
@@ -23,7 +23,7 @@
     "fabric": "*",
     "minecraft": ">=1.19",
     "java": ">=17",
-    "collective": ">=7.3"
+    "collective": ">=7.21"
   },
 
   "custom": {
