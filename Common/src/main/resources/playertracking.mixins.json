@@ -1,10 +1,8 @@
 {
   "required": true,
   "minVersion": "0.8",
-  "package": "com.natamus.playertracking.forge.mixin",
-  "plugin": "com.natamus.collective.forge.mixin.plugin.ForgeMixinConfigPlugin",
+  "package": "com.natamus.playertracking.mixin",
   "compatibilityLevel": "JAVA_17",
-  "refmap": "playertracking_forge.refmap.json",
   "mixins": [
 
   ],

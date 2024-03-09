@@ -4,7 +4,7 @@ import com.mojang.brigadier.CommandDispatcher;
 import com.mojang.brigadier.arguments.IntegerArgumentType;
 import com.mojang.brigadier.arguments.StringArgumentType;
 import com.natamus.collective.functions.PlayerFunctions;
-import com.natamus.collective.functions.StringFunctions;
+import com.natamus.collective.functions.MessageFunctions;
 import com.natamus.playertracking.util.Tracking;
 import net.minecraft.ChatFormatting;
 import net.minecraft.commands.CommandSourceStack;
@@ -23,12 +23,12 @@ public class CommandTrack {
 					.executes((command) -> {
 						Player player = command.getSource().getPlayerOrException();
 						
-						StringFunctions.sendMessage(player, "Tracking Help Page (1/5)", ChatFormatting.DARK_GRAY, true);
-						StringFunctions.sendMessage(player, "For an introduction to tracking read page 2.", ChatFormatting.GRAY);
-						StringFunctions.sendMessage(player, "For information on building a tracker read page 3.", ChatFormatting.GRAY);
-						StringFunctions.sendMessage(player, "For explanation on '/track all' read page 4.", ChatFormatting.GRAY);
-						StringFunctions.sendMessage(player, "For explanation on '/track [playerName]' read page 5.", ChatFormatting.GRAY);
-						StringFunctions.sendMessage(player, "To select a page: '/track help [page]'", ChatFormatting.GRAY);
+						MessageFunctions.sendMessage(player, "Tracking Help Page (1/5)", ChatFormatting.DARK_GRAY, true);
+						MessageFunctions.sendMessage(player, "For an introduction to tracking read page 2.", ChatFormatting.GRAY);
+						MessageFunctions.sendMessage(player, "For information on building a tracker read page 3.", ChatFormatting.GRAY);
+						MessageFunctions.sendMessage(player, "For explanation on '/track all' read page 4.", ChatFormatting.GRAY);
+						MessageFunctions.sendMessage(player, "For explanation on '/track [playerName]' read page 5.", ChatFormatting.GRAY);
+						MessageFunctions.sendMessage(player, "To select a page: '/track help [page]'", ChatFormatting.GRAY);
 						return 1;
 					}))
 					.then(Commands.literal("help")
@@ -39,44 +39,44 @@ public class CommandTrack {
 						int page = IntegerArgumentType.getInteger(command, "page");
 						
 						if (page == 2) {
-							StringFunctions.sendMessage(player, "Tracking Help Page (2/5) - Introduction", ChatFormatting.DARK_GRAY, true);
-							StringFunctions.sendMessage(player, "Tracking is a feature to encourage raiding on a server. Without this it would be near-impossible to find " +
+							MessageFunctions.sendMessage(player, "Tracking Help Page (2/5) - Introduction", ChatFormatting.DARK_GRAY, true);
+							MessageFunctions.sendMessage(player, "Tracking is a feature to encourage raiding on a server. Without this it would be near-impossible to find " +
 									"enemy bases legit, and would give hackers an unfair advantage. Tracking is the art of finding a player before he or she finds you. It is not cheap, " +
 									"you will need many valuable materials to start off. Read the next few pages for more information.", ChatFormatting.GRAY);
 							return 1;
 						}
 						else if (page == 3) {
-							StringFunctions.sendMessage(player, "Tracking Help Page (3/5) - Building", ChatFormatting.DARK_GRAY, true);
-							StringFunctions.sendMessage(player, "To start building a solid tracker you will need a 'Diamond Block' for the middle, " +
+							MessageFunctions.sendMessage(player, "Tracking Help Page (3/5) - Building", ChatFormatting.DARK_GRAY, true);
+							MessageFunctions.sendMessage(player, "To start building a solid tracker you will need a 'Diamond Block' for the middle, " +
 									"4 'Gold Blocks' for the end of each 'arm', and as much 'Obsidian' " + 
 									"as you can find for the length of the arms. Every obsidian block equals 25 blocks in the real world. Build your tracker at a smart position. Not too " +
 									"close to spawn, and not at coords that are easy to guess. You are not the only one that will try to make one.", ChatFormatting.GRAY);
-							StringFunctions.sendMessage(player, "To see a 'layout' of a tracker do '/track help 3 layout'", ChatFormatting.DARK_GRAY);
+							MessageFunctions.sendMessage(player, "To see a 'layout' of a tracker do '/track help 3 layout'", ChatFormatting.DARK_GRAY);
 							return 1;
 						}
 						else if (page == 4) {
-							StringFunctions.sendMessage(player, "Tracking Help Page (4/5) - /track all", ChatFormatting.DARK_GRAY, true);
-							StringFunctions.sendMessage(player, "Once you have made your own solid tracker, it's time to find those bases! Stand on the Diamond block in the middle of your " +
+							MessageFunctions.sendMessage(player, "Tracking Help Page (4/5) - /track all", ChatFormatting.DARK_GRAY, true);
+							MessageFunctions.sendMessage(player, "Once you have made your own solid tracker, it's time to find those bases! Stand on the Diamond block in the middle of your " +
 									"tracker and do /track all. If there are players within the range of your tracker they will show up. You will need a player on atleast 2 of your arms to " +
 									"continue to page 5. If not, try to increase the length of your arms or wait until there are more/different players online.", ChatFormatting.GRAY);
-							StringFunctions.sendMessage(player, "To proceed to page 5 do '/track help 5'", ChatFormatting.DARK_GRAY);
+							MessageFunctions.sendMessage(player, "To proceed to page 5 do '/track help 5'", ChatFormatting.DARK_GRAY);
 							return 1;
 						}
 						else if (page == 5) {
-							StringFunctions.sendMessage(player, "Tracking Help Page (5/5) - /track [playerName]", ChatFormatting.DARK_GRAY, true);
-							StringFunctions.sendMessage(player, "If you are lucky enough to find a player on 2 different arms, it's time to lower the size of your arms. Keep moving the Gold " +
+							MessageFunctions.sendMessage(player, "Tracking Help Page (5/5) - /track [playerName]", ChatFormatting.DARK_GRAY, true);
+							MessageFunctions.sendMessage(player, "If you are lucky enough to find a player on 2 different arms, it's time to lower the size of your arms. Keep moving the Gold " +
 									"block down/up your arm to pinpoint the location of the player you want to track. If he doesn't show up anymore after you moved the Gold block, place the " +
 									"block higher up until you are at a 1 block difference. Now all that is left is to add the length of the arm from the respective coordinate on your " +
 									"Diamond block and you've found the location of an enemy within 25 blocks!", ChatFormatting.GRAY);
 							return 1;
 						}
 						
-						StringFunctions.sendMessage(player, "Tracking Help Page (1/5)", ChatFormatting.DARK_GRAY, true);
-						StringFunctions.sendMessage(player, "For an introduction to tracking read page 2.", ChatFormatting.GRAY);
-						StringFunctions.sendMessage(player, "For information on building a tracker read page 3.", ChatFormatting.GRAY);
-						StringFunctions.sendMessage(player, "For explanation on '/track all' read page 4.", ChatFormatting.GRAY);
-						StringFunctions.sendMessage(player, "For explanation on '/track [playerName]' read page 5.", ChatFormatting.GRAY);
-						StringFunctions.sendMessage(player, "To select a page: '/track help [page]'", ChatFormatting.GRAY);
+						MessageFunctions.sendMessage(player, "Tracking Help Page (1/5)", ChatFormatting.DARK_GRAY, true);
+						MessageFunctions.sendMessage(player, "For an introduction to tracking read page 2.", ChatFormatting.GRAY);
+						MessageFunctions.sendMessage(player, "For information on building a tracker read page 3.", ChatFormatting.GRAY);
+						MessageFunctions.sendMessage(player, "For explanation on '/track all' read page 4.", ChatFormatting.GRAY);
+						MessageFunctions.sendMessage(player, "For explanation on '/track [playerName]' read page 5.", ChatFormatting.GRAY);
+						MessageFunctions.sendMessage(player, "To select a page: '/track help [page]'", ChatFormatting.GRAY);
 						return 1;
 					})))
 					.then(Commands.literal("help")
@@ -85,14 +85,14 @@ public class CommandTrack {
 					.executes((command) -> {
 						Player player = command.getSource().getPlayerOrException();
 						
-						StringFunctions.sendMessage(player, "Tracking Help Page (3/5) - Building LAYOUT", ChatFormatting.DARK_GRAY, true);
-						StringFunctions.sendMessage(player, "In the picture below you can see multiple letters and dashes. The dashes are Obsidian blocks, D is a Diamond block, and G are Gold blocks.", ChatFormatting.GRAY);
-						StringFunctions.sendMessage(player, "         G", ChatFormatting.GRAY);
-						StringFunctions.sendMessage(player, "         |", ChatFormatting.GRAY);
-						StringFunctions.sendMessage(player, "    G--D--G ", ChatFormatting.GRAY);
-						StringFunctions.sendMessage(player, "         |", ChatFormatting.GRAY);
-						StringFunctions.sendMessage(player, "         G", ChatFormatting.GRAY);
-						StringFunctions.sendMessage(player, "", ChatFormatting.GRAY);   				
+						MessageFunctions.sendMessage(player, "Tracking Help Page (3/5) - Building LAYOUT", ChatFormatting.DARK_GRAY, true);
+						MessageFunctions.sendMessage(player, "In the picture below you can see multiple letters and dashes. The dashes are Obsidian blocks, D is a Diamond block, and G are Gold blocks.", ChatFormatting.GRAY);
+						MessageFunctions.sendMessage(player, "         G", ChatFormatting.GRAY);
+						MessageFunctions.sendMessage(player, "         |", ChatFormatting.GRAY);
+						MessageFunctions.sendMessage(player, "    G--D--G ", ChatFormatting.GRAY);
+						MessageFunctions.sendMessage(player, "         |", ChatFormatting.GRAY);
+						MessageFunctions.sendMessage(player, "         G", ChatFormatting.GRAY);
+						MessageFunctions.sendMessage(player, "", ChatFormatting.GRAY);   				
 						return 1;
 					}))))
 					.then(Commands.literal("all")
@@ -109,12 +109,12 @@ public class CommandTrack {
 							return 1;
 						}
 						if(block.equals(Blocks.OBSIDIAN)) {
-							StringFunctions.sendMessage(player, "You cannot track all with this type of tracker", ChatFormatting.GRAY);
+							MessageFunctions.sendMessage(player, "You cannot track all with this type of tracker", ChatFormatting.GRAY);
 							return 1;
 						}
 
-						StringFunctions.sendMessage(player, "You need to be on a solid tracker to '/track all'", ChatFormatting.GRAY);
-						StringFunctions.sendMessage(player, "Do '/track help' for more information.", ChatFormatting.GRAY);
+						MessageFunctions.sendMessage(player, "You need to be on a solid tracker to '/track all'", ChatFormatting.GRAY);
+						MessageFunctions.sendMessage(player, "Do '/track help' for more information.", ChatFormatting.GRAY);
 						return 1;
 					}))
 					.then(Commands.argument("playerName", StringArgumentType.string())
@@ -130,13 +130,13 @@ public class CommandTrack {
 							tracker.Track(player, other);
 							return 1;
 						}
-						StringFunctions.sendMessage(player, "Could not find player '" + playername + "'.", ChatFormatting.GRAY);
+						MessageFunctions.sendMessage(player, "Could not find player '" + playername + "'.", ChatFormatting.GRAY);
 						return 1;
 					}))
 					.executes((command) -> {
 						Player player = command.getSource().getPlayerOrException();
-						StringFunctions.sendMessage(player, "Use '/track [playerName]'  or '/track all'.", ChatFormatting.GRAY);
-						StringFunctions.sendMessage(player, "Or do '/track help' for information.", ChatFormatting.GRAY);
+						MessageFunctions.sendMessage(player, "Use '/track [playerName]'  or '/track all'.", ChatFormatting.GRAY);
+						MessageFunctions.sendMessage(player, "Or do '/track help' for information.", ChatFormatting.GRAY);
 						return 1;
 					})
 				);
