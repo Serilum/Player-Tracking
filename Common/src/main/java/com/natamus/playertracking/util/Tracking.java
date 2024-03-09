@@ -1,6 +1,6 @@
 package com.natamus.playertracking.util;
 
-import com.natamus.collective.functions.StringFunctions;
+import com.natamus.collective.functions.MessageFunctions;
 import net.minecraft.ChatFormatting;
 import net.minecraft.core.BlockPos;
 import net.minecraft.world.entity.player.Player;
@@ -93,7 +93,7 @@ public class Tracking {
 			str.append(value.getName()).append(",");
 		}
 
-		StringFunctions.sendMessage(player, compass + "<" + num + ">: " + str, ChatFormatting.GRAY);
+		MessageFunctions.sendMessage(player, compass + "<" + num + ">: " + str, ChatFormatting.GRAY);
 	}
 
 	public int findBlock(Level world, int x, int z, Block block1, Block block2) {
@@ -141,7 +141,7 @@ public class Tracking {
 		int eastDist = findBlock(world, 0, -1, block1, block2);
 		int westDist = findBlock(world, 0, 1, block1, block2);
 		
-		StringFunctions.sendMessage(player, "Tracking Data:     (Use F3 for directions)", ChatFormatting.DARK_GRAY);
+		MessageFunctions.sendMessage(player, "Tracking Data:     (Use F3 for directions)", ChatFormatting.DARK_GRAY);
 		if (northDist > 0) {
 			TrackDir(player, -northDist * 25, 0, player2);
 		}
@@ -172,7 +172,7 @@ public class Tracking {
 			return;
 		}
 		
-		StringFunctions.sendMessage(player, "You need to be on a tracking block to do that.", ChatFormatting.GRAY);
-		StringFunctions.sendMessage(player, "Do '/track help' for more information.", ChatFormatting.GRAY);
+		MessageFunctions.sendMessage(player, "You need to be on a tracking block to do that.", ChatFormatting.GRAY);
+		MessageFunctions.sendMessage(player, "Do '/track help' for more information.", ChatFormatting.GRAY);
 	}
 }
