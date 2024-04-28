@@ -1,0 +1,37 @@
+modLoader="javafml"
+loaderVersion="*"
+license="All rights reserved"
+issueTrackerURL="https://github.com/Serilum/.issue-tracker/labels/Mod:%20Player%20Tracking"
+logoFile="icon.png"
+
+[[mods]]
+modId="playertracking"
+version="3.3"
+displayName="Player Tracking"
+displayURL="https://serilum.com/mod/player-tracking"
+authors="Rick South"
+description='''A PvP mod which allows tracking players via trackers in the world, originally created by mcpvp.
+'''
+credits='''Thank you very much to my Membership sponsors for supporting the development of this mod:  
+
+Alister, Andrean Olgo, aternosorg, BirdieMiner, Cherriesaurus, Jack, Jeremy Langford, Michael W. S., pepe1191, Shana Gitnick, Tyler Behl   
+
+If you would like to contribute too, check out https://serilum.com/donate. Appreciate it! <3   
+'''
+
+[[dependencies.playertracking]]
+    modId="collective"
+    type="required"
+    versionRange="[7.53,)"
+    ordering="NONE"
+    side="BOTH"
+
+[[dependencies.playertracking]]
+    modId="minecraft"
+    type="required"
+    versionRange="[1.20.5]"
+    ordering="NONE"
+    side="BOTH"
+
+[[mixins]]
+    config = "playertracking.mixins.json"
