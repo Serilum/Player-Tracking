@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "id": "playertracking",
-  "version": "3.3",
+  "version": "3.4",
 
   "name": "Player Tracking",
   "description": "A PvP mod which allows tracking players via trackers in the world, originally created by mcpvp.",
@@ -23,7 +23,7 @@
     "fabric": "*",
     "minecraft": ">=1.21",
     "java": ">=21",
-    "collective": ">=7.61"
+    "collective": ">=7.78"
   },
 
   "custom": {
@@ -44,11 +44,9 @@
 	  " Alister",
 	  " Andrean Olgo",
 	  " aternosorg",
-	  " BirdieMiner",
 	  " Cherriesaurus",
-	  " Jeremy Langford",
 	  " Michael W. S.",
-	  " Rare Students",
+	  " Nahuel Fernandez",
 	  " Shana Gitnick",
 	  " Tyler Behl"
   ]
