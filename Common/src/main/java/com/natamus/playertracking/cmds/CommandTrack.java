@@ -23,12 +23,12 @@ public class CommandTrack {
 					.executes((command) -> {
 						Player player = command.getSource().getPlayerOrException();
 						
-						MessageFunctions.sendMessage(player, "Tracking Help Page (1/5)", ChatFormatting.DARK_GRAY, true);
-						MessageFunctions.sendMessage(player, "For an introduction to tracking read page 2.", ChatFormatting.GRAY);
-						MessageFunctions.sendMessage(player, "For information on building a tracker read page 3.", ChatFormatting.GRAY);
-						MessageFunctions.sendMessage(player, "For explanation on '/track all' read page 4.", ChatFormatting.GRAY);
-						MessageFunctions.sendMessage(player, "For explanation on '/track [playerName]' read page 5.", ChatFormatting.GRAY);
-						MessageFunctions.sendMessage(player, "To select a page: '/track help [page]'", ChatFormatting.GRAY);
+						MessageFunctions.sendTranslatableMessage(player, "collective.playertracking.message.trackinghelppage1", true, ChatFormatting.DARK_GRAY);
+						MessageFunctions.sendTranslatableMessage(player, "collective.playertracking.message.introductiontrackingread", ChatFormatting.GRAY);
+						MessageFunctions.sendTranslatableMessage(player, "collective.playertracking.message.informationbuildingtracker", ChatFormatting.GRAY);
+						MessageFunctions.sendTranslatableMessage(player, "collective.playertracking.message.explanationtrackread", ChatFormatting.GRAY);
+						MessageFunctions.sendTranslatableMessage(player, "collective.playertracking.message.explanationtrackplayername", ChatFormatting.GRAY);
+						MessageFunctions.sendTranslatableMessage(player, "collective.playertracking.message.selectpagetrack", ChatFormatting.GRAY);
 						return 1;
 					}))
 					.then(Commands.literal("help")
@@ -39,44 +39,34 @@ public class CommandTrack {
 						int page = IntegerArgumentType.getInteger(command, "page");
 						
 						if (page == 2) {
-							MessageFunctions.sendMessage(player, "Tracking Help Page (2/5) - Introduction", ChatFormatting.DARK_GRAY, true);
-							MessageFunctions.sendMessage(player, "Tracking is a feature to encourage raiding on a server. Without this it would be near-impossible to find " +
-									"enemy bases legit, and would give hackers an unfair advantage. Tracking is the art of finding a player before he or she finds you. It is not cheap, " +
-									"you will need many valuable materials to start off. Read the next few pages for more information.", ChatFormatting.GRAY);
+							MessageFunctions.sendTranslatableMessage(player, "collective.playertracking.message.trackinghelppage2", true, ChatFormatting.DARK_GRAY);
+							MessageFunctions.sendTranslatableMessage(player, "collective.playertracking.message.trackingfeatureencourage", ChatFormatting.GRAY);
 							return 1;
 						}
 						else if (page == 3) {
-							MessageFunctions.sendMessage(player, "Tracking Help Page (3/5) - Building", ChatFormatting.DARK_GRAY, true);
-							MessageFunctions.sendMessage(player, "To start building a solid tracker you will need a 'Diamond Block' for the middle, " +
-									"4 'Gold Blocks' for the end of each 'arm', and as much 'Obsidian' " + 
-									"as you can find for the length of the arms. Every obsidian block equals 25 blocks in the real world. Build your tracker at a smart position. Not too " +
-									"close to spawn, and not at coords that are easy to guess. You are not the only one that will try to make one.", ChatFormatting.GRAY);
-							MessageFunctions.sendMessage(player, "To see a 'layout' of a tracker do '/track help 3 layout'", ChatFormatting.DARK_GRAY);
+							MessageFunctions.sendTranslatableMessage(player, "collective.playertracking.message.trackinghelppage3", true, ChatFormatting.DARK_GRAY);
+							MessageFunctions.sendTranslatableMessage(player, "collective.playertracking.message.startbuildingsolid", ChatFormatting.GRAY);
+							MessageFunctions.sendTranslatableMessage(player, "collective.playertracking.message.seelayouttracker", ChatFormatting.DARK_GRAY);
 							return 1;
 						}
 						else if (page == 4) {
-							MessageFunctions.sendMessage(player, "Tracking Help Page (4/5) - /track all", ChatFormatting.DARK_GRAY, true);
-							MessageFunctions.sendMessage(player, "Once you have made your own solid tracker, it's time to find those bases! Stand on the Diamond block in the middle of your " +
-									"tracker and do /track all. If there are players within the range of your tracker they will show up. You will need a player on atleast 2 of your arms to " +
-									"continue to page 5. If not, try to increase the length of your arms or wait until there are more/different players online.", ChatFormatting.GRAY);
-							MessageFunctions.sendMessage(player, "To proceed to page 5 do '/track help 5'", ChatFormatting.DARK_GRAY);
+							MessageFunctions.sendTranslatableMessage(player, "collective.playertracking.message.trackinghelppage4", true, ChatFormatting.DARK_GRAY);
+							MessageFunctions.sendTranslatableMessage(player, "collective.playertracking.message.oncemadeown", ChatFormatting.GRAY);
+							MessageFunctions.sendTranslatableMessage(player, "collective.playertracking.message.proceedpage5", ChatFormatting.DARK_GRAY);
 							return 1;
 						}
 						else if (page == 5) {
-							MessageFunctions.sendMessage(player, "Tracking Help Page (5/5) - /track [playerName]", ChatFormatting.DARK_GRAY, true);
-							MessageFunctions.sendMessage(player, "If you are lucky enough to find a player on 2 different arms, it's time to lower the size of your arms. Keep moving the Gold " +
-									"block down/up your arm to pinpoint the location of the player you want to track. If he doesn't show up anymore after you moved the Gold block, place the " +
-									"block higher up until you are at a 1 block difference. Now all that is left is to add the length of the arm from the respective coordinate on your " +
-									"Diamond block and you've found the location of an enemy within 25 blocks!", ChatFormatting.GRAY);
+							MessageFunctions.sendTranslatableMessage(player, "collective.playertracking.message.trackinghelppage5", true, ChatFormatting.DARK_GRAY);
+							MessageFunctions.sendTranslatableMessage(player, "collective.playertracking.message.ifluckyenough", ChatFormatting.GRAY);
 							return 1;
 						}
 						
-						MessageFunctions.sendMessage(player, "Tracking Help Page (1/5)", ChatFormatting.DARK_GRAY, true);
-						MessageFunctions.sendMessage(player, "For an introduction to tracking read page 2.", ChatFormatting.GRAY);
-						MessageFunctions.sendMessage(player, "For information on building a tracker read page 3.", ChatFormatting.GRAY);
-						MessageFunctions.sendMessage(player, "For explanation on '/track all' read page 4.", ChatFormatting.GRAY);
-						MessageFunctions.sendMessage(player, "For explanation on '/track [playerName]' read page 5.", ChatFormatting.GRAY);
-						MessageFunctions.sendMessage(player, "To select a page: '/track help [page]'", ChatFormatting.GRAY);
+						MessageFunctions.sendTranslatableMessage(player, "collective.playertracking.message.trackinghelppage1", true, ChatFormatting.DARK_GRAY);
+						MessageFunctions.sendTranslatableMessage(player, "collective.playertracking.message.introductiontrackingread", ChatFormatting.GRAY);
+						MessageFunctions.sendTranslatableMessage(player, "collective.playertracking.message.informationbuildingtracker", ChatFormatting.GRAY);
+						MessageFunctions.sendTranslatableMessage(player, "collective.playertracking.message.explanationtrackread", ChatFormatting.GRAY);
+						MessageFunctions.sendTranslatableMessage(player, "collective.playertracking.message.explanationtrackplayername", ChatFormatting.GRAY);
+						MessageFunctions.sendTranslatableMessage(player, "collective.playertracking.message.selectpagetrack", ChatFormatting.GRAY);
 						return 1;
 					})))
 					.then(Commands.literal("help")
@@ -85,8 +75,8 @@ public class CommandTrack {
 					.executes((command) -> {
 						Player player = command.getSource().getPlayerOrException();
 						
-						MessageFunctions.sendMessage(player, "Tracking Help Page (3/5) - Building LAYOUT", ChatFormatting.DARK_GRAY, true);
-						MessageFunctions.sendMessage(player, "In the picture below you can see multiple letters and dashes. The dashes are Obsidian blocks, D is a Diamond block, and G are Gold blocks.", ChatFormatting.GRAY);
+						MessageFunctions.sendTranslatableMessage(player, "collective.playertracking.message.trackinghelppage35", true, ChatFormatting.DARK_GRAY);
+						MessageFunctions.sendTranslatableMessage(player, "collective.playertracking.message.picturebelowsee", ChatFormatting.GRAY);
 						MessageFunctions.sendMessage(player, "         G", ChatFormatting.GRAY);
 						MessageFunctions.sendMessage(player, "         |", ChatFormatting.GRAY);
 						MessageFunctions.sendMessage(player, "    G--D--G ", ChatFormatting.GRAY);
@@ -109,12 +99,12 @@ public class CommandTrack {
 							return 1;
 						}
 						if(block.equals(Blocks.OBSIDIAN)) {
-							MessageFunctions.sendMessage(player, "You cannot track all with this type of tracker", ChatFormatting.GRAY);
+							MessageFunctions.sendTranslatableMessage(player, "collective.playertracking.message.cannottracktype", ChatFormatting.GRAY);
 							return 1;
 						}
 
-						MessageFunctions.sendMessage(player, "You need to be on a solid tracker to '/track all'", ChatFormatting.GRAY);
-						MessageFunctions.sendMessage(player, "Do '/track help' for more information.", ChatFormatting.GRAY);
+						MessageFunctions.sendTranslatableMessage(player, "collective.playertracking.message.needsolidtracker", ChatFormatting.GRAY);
+						MessageFunctions.sendTranslatableMessage(player, "collective.playertracking.message.trackhelpmore", ChatFormatting.GRAY);
 						return 1;
 					}))
 					.then(Commands.argument("playerName", StringArgumentType.string())
@@ -130,13 +120,13 @@ public class CommandTrack {
 							tracker.Track(player, other);
 							return 1;
 						}
-						MessageFunctions.sendMessage(player, "Could not find player '" + playername + "'.", ChatFormatting.GRAY);
+						MessageFunctions.sendTranslatableMessage(player, "collective.playertracking.message.findplayer", ChatFormatting.GRAY, playername);
 						return 1;
 					}))
 					.executes((command) -> {
 						Player player = command.getSource().getPlayerOrException();
-						MessageFunctions.sendMessage(player, "Use '/track [playerName]'  or '/track all'.", ChatFormatting.GRAY);
-						MessageFunctions.sendMessage(player, "Or do '/track help' for information.", ChatFormatting.GRAY);
+						MessageFunctions.sendTranslatableMessage(player, "collective.playertracking.message.usetrackplayername", ChatFormatting.GRAY);
+						MessageFunctions.sendTranslatableMessage(player, "collective.playertracking.message.trackhelpinformation", ChatFormatting.GRAY);
 						return 1;
 					})
 				);
