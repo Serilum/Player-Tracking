@@ -141,7 +141,7 @@ public class Tracking {
 		int eastDist = findBlock(world, 0, -1, block1, block2);
 		int westDist = findBlock(world, 0, 1, block1, block2);
 		
-		MessageFunctions.sendMessage(player, "Tracking Data:     (Use F3 for directions)", ChatFormatting.DARK_GRAY);
+		MessageFunctions.sendTranslatableMessage(player, "collective.playertracking.message.trackingdatause", ChatFormatting.DARK_GRAY);
 		if (northDist > 0) {
 			TrackDir(player, -northDist * 25, 0, player2);
 		}
@@ -172,7 +172,7 @@ public class Tracking {
 			return;
 		}
 		
-		MessageFunctions.sendMessage(player, "You need to be on a tracking block to do that.", ChatFormatting.GRAY);
-		MessageFunctions.sendMessage(player, "Do '/track help' for more information.", ChatFormatting.GRAY);
+		MessageFunctions.sendTranslatableMessage(player, "collective.playertracking.message.needtrackingblock", ChatFormatting.GRAY);
+		MessageFunctions.sendTranslatableMessage(player, "collective.playertracking.message.trackhelpmore", ChatFormatting.GRAY);
 	}
 }
