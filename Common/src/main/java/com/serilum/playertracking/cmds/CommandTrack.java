@@ -1,11 +1,11 @@
-package com.natamus.playertracking.cmds;
+package com.serilum.playertracking.cmds;
 
 import com.mojang.brigadier.CommandDispatcher;
 import com.mojang.brigadier.arguments.IntegerArgumentType;
 import com.mojang.brigadier.arguments.StringArgumentType;
 import com.natamus.collective.functions.PlayerFunctions;
 import com.natamus.collective.functions.MessageFunctions;
-import com.natamus.playertracking.util.Tracking;
+import com.serilum.playertracking.util.Tracking;
 import net.minecraft.ChatFormatting;
 import net.minecraft.commands.CommandSourceStack;
 import net.minecraft.commands.Commands;
