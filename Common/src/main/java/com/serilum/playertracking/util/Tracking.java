@@ -1,4 +1,4 @@
-package com.natamus.playertracking.util;
+package com.serilum.playertracking.util;
 
 import com.natamus.collective.functions.MessageFunctions;
 import net.minecraft.ChatFormatting;

@@ -1,9 +1,9 @@
-package com.natamus.playertracking;
+package com.serilum.playertracking;
 
 import com.natamus.collective.check.RegisterMod;
 import com.natamus.collective.check.ShouldLoadCheck;
-import com.natamus.playertracking.cmds.CommandTrack;
-import com.natamus.playertracking.util.Reference;
+import com.serilum.playertracking.cmds.CommandTrack;
+import com.serilum.playertracking.util.Reference;
 import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.command.v2.CommandRegistrationCallback;
 
