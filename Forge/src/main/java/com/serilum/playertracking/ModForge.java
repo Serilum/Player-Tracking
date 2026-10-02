@@ -1,9 +1,9 @@
-package com.natamus.playertracking;
+package com.serilum.playertracking;
 
 import com.natamus.collective.check.RegisterMod;
 import com.natamus.collective.check.ShouldLoadCheck;
-import com.natamus.playertracking.forge.events.ForgeCommandRegisterEvent;
-import com.natamus.playertracking.util.Reference;
+import com.serilum.playertracking.forge.events.ForgeCommandRegisterEvent;
+import com.serilum.playertracking.util.Reference;
 import net.minecraftforge.eventbus.api.bus.BusGroup;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.FMLLoadCompleteEvent;
