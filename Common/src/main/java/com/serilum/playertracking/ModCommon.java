@@ -1,4 +1,4 @@
-package com.natamus.playertracking;
+package com.serilum.playertracking;
 
 
 public class ModCommon {

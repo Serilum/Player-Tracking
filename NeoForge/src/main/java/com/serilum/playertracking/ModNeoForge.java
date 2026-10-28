@@ -1,9 +1,9 @@
-package com.natamus.playertracking;
+package com.serilum.playertracking;
 
 import com.natamus.collective.check.RegisterMod;
 import com.natamus.collective.check.ShouldLoadCheck;
-import com.natamus.playertracking.neoforge.events.NeoForgeCommandRegisterEvent;
-import com.natamus.playertracking.util.Reference;
+import com.serilum.playertracking.neoforge.events.NeoForgeCommandRegisterEvent;
+import com.serilum.playertracking.util.Reference;
 import net.neoforged.neoforge.common.NeoForge;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.fml.common.Mod;

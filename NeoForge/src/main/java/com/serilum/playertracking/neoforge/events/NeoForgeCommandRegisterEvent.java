@@ -1,6 +1,6 @@
-package com.natamus.playertracking.neoforge.events;
+package com.serilum.playertracking.neoforge.events;
 
-import com.natamus.playertracking.cmds.CommandTrack;
+import com.serilum.playertracking.cmds.CommandTrack;
 import net.neoforged.neoforge.event.RegisterCommandsEvent;
 import net.neoforged.bus.api.SubscribeEvent;
 

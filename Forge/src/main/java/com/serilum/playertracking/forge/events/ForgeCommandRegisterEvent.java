@@ -1,6 +1,6 @@
-package com.natamus.playertracking.forge.events;
+package com.serilum.playertracking.forge.events;
 
-import com.natamus.playertracking.cmds.CommandTrack;
+import com.serilum.playertracking.cmds.CommandTrack;
 import net.minecraftforge.event.RegisterCommandsEvent;
 import net.minecraftforge.eventbus.api.bus.BusGroup;
 import net.minecraftforge.eventbus.api.listener.SubscribeEvent;
@@ -14,8 +14,8 @@ public class ForgeCommandRegisterEvent {
 		RegisterCommandsEvent.BUS.addListener(ForgeCommandRegisterEvent::registerCommands);
 	}
 
-    @SubscribeEvent
-    public static void registerCommands(RegisterCommandsEvent e) {
-    	CommandTrack.register(e.getDispatcher());
-    }
+	@SubscribeEvent
+	public static void registerCommands(RegisterCommandsEvent e) {
+		CommandTrack.register(e.getDispatcher());
+	}
 }
